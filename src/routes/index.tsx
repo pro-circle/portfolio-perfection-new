@@ -24,6 +24,23 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  // Restore the section the visitor came back to (e.g. /projects/$slug -> /#projects).
+  useEffect(() => {
+    const id = window.location.hash.replace("#", "");
+    if (!id) return;
+    let tries = 0;
+    const tick = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 72;
+        window.scrollTo({ top, behavior: "auto" });
+        return;
+      }
+      if (tries++ < 20) requestAnimationFrame(tick);
+    };
+    tick();
+  }, []);
+
   return (
     <div className="relative min-h-screen">
       <Header />
