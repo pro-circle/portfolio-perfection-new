@@ -50,7 +50,7 @@ const items: Item[] = [
 
 function HobbiesPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen">
       <div className="fixed top-4 right-4 z-50"><ThemeToggle /></div>
       <div className="max-w-6xl mx-auto section-padding">
         <Link
