@@ -29,7 +29,7 @@ export const projects: ProjectItem[] = [
       "I learned how multi-channel notifications can improve payment recovery and reduce dependency on a single platform. Integrating UPI links showed how reducing payment friction can accelerate collections. AI-based payment analysis also demonstrated how customer behavior can support proactive follow-ups and better cash-flow decisions.",
     tags: ["Flask", "Supabase", "Groq",],
     year: "2025",
-    githubUrl: "https://github.com/your-handle/distributed-task-queue",
+    githubUrl: "https://github.com/vik77-git",
     liveUrl: "https://invoice-flow-mvp.web.app/",
     thumbnail: "/images/Projects/inv-thumb.png",
     screenshots: [
@@ -49,7 +49,7 @@ export const projects: ProjectItem[] = [
       "I learned how computer vision and OCR can work together to automate document verification. Working with YOLO helped me understand object detection, while OCR and image preprocessing showed me the importance of image quality for accurate text extraction. Integrating validation algorithms with the AI pipeline also taught me how different technologies can be combined to build a practical real-world solution.",
     tags: ["YOLO", "Hugging Face", "jinja", "Flask"],
     year: "2025",
-    githubUrl: "https://github.com/your-handle/dev-cli-toolkit",
+    githubUrl: "https://github.com/vik77-git",
     liveUrl: "https://hug-vik-7-demo.hf.space/",
     thumbnail: "/images/Projects/aadhar1.png",
     screenshots: [
