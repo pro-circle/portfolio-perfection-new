@@ -16,7 +16,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { RocketCursor } from "@/components/portfolio/RocketCursor";
 import { ClickSparkle } from "@/components/portfolio/ClickSparkle";
-import AmbientBackground from "@/components/portfolio/AmbientBackground";
+
 import PageTransition from "@/components/portfolio/PageTransition";
 
 
@@ -169,7 +169,6 @@ function RootComponent() {
         <Sonner />
         <RocketCursor />
         <ClickSparkle />
-        <AmbientBackground />
 
         <div className="relative z-10">
           <PageTransition>
