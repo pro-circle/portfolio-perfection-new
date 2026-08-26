@@ -246,6 +246,19 @@
   animation: bar-grow-blue 15s ease-in-out infinite;
 }
 
+/* Ken Burns slow zoom for project frames in the profile circle */
+@keyframes ken-burns {
+  0%   { transform: scale(1.02) translate3d(0, 0, 0); }
+  100% { transform: scale(1.16) translate3d(-1.5%, -1.5%, 0); }
+}
+.ken-burns {
+  animation: ken-burns 5.2s ease-out forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns { animation: none; }
+}
+
+
 /* Shimmer headline (Career Summary) */
 .text-shimmer {
   background: linear-gradient(
