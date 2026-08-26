@@ -132,19 +132,9 @@ const Achievements = () => {
   return (
     <section id="achievements" ref={sectionRef} className="section-padding border-t border-border">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 mb-10 items-start">
-            <div>
-              <SectionLabel label="Achievements" phase={phase} />
-            </div>
-            <div />
-          </div>
-        </motion.div>
+        <div className="mb-10 md:sticky md:top-20 z-20 bg-background/85 backdrop-blur-sm py-3">
+          <SectionLabel label="Achievements" phase={phase} />
+        </div>
 
         <div className="stream-reveal" data-ready={phase === "ready"}>
           <div className="mt-20 flex flex-col items-center justify-center" data-ai-anchor="marquee-stack-gap">
