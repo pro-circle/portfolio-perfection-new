@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import Header from "@/components/portfolio/Header";
 import Hero from "@/components/portfolio/Hero";
