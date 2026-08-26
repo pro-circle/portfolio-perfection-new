@@ -157,10 +157,15 @@
   }
 
   html, body {
-    /* `clip` keeps horizontal overflow contained without creating a scroll
-       container, which would break position: sticky (Experience heading). */
-    overflow-x: clip;
     max-width: 100%;
+  }
+
+  /* Horizontal overflow is contained on the root only. Putting overflow on
+     <body> as well turns it into a scroll container (breaks position: sticky),
+     and `clip` on the root propagates to the viewport and kills scrolling
+     entirely (which also froze the rocket-cursor canvas layer). */
+  html {
+    overflow-x: hidden;
   }
 
   body {
