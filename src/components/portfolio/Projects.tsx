@@ -7,6 +7,7 @@ import SectionLabel from "./SectionLabel";
 import StreamText from "./StreamText";
 import { projects } from "@/data/projects";
 import LoadingImage from "./LoadingImage";
+import TiltCard from "./TiltCard";
 
 const openSourceProjects = [
   {
@@ -72,14 +73,16 @@ const Projects = () => {
                 </div>
                 <div className="flex flex-col items-end gap-3 shrink-0">
                   <p className="text-sm text-muted-foreground font-mono">{project.year}</p>
-                  <div className="relative w-[180px] h-[120px] rounded-lg overflow-hidden border border-border bg-secondary group-hover:border-accent transition-colors">
-                    <LoadingImage
-                      src={project.thumbnail}
-                      alt={`${project.title} thumbnail`}
-                      rounded="rounded-lg"
-                    />
-                    <span className="water-ripple" aria-hidden="true" />
-                  </div>
+                  <TiltCard className="w-[180px] h-[120px]" max={5}>
+                    <div className="relative w-[180px] h-[120px] rounded-lg overflow-hidden border border-border bg-secondary group-hover:border-accent transition-colors">
+                      <LoadingImage
+                        src={project.thumbnail}
+                        alt={`${project.title} thumbnail`}
+                        rounded="rounded-lg"
+                      />
+                      <span className="water-ripple" aria-hidden="true" />
+                    </div>
+                  </TiltCard>
 
                 </div>
               </div>

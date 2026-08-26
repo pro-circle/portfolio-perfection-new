@@ -19,7 +19,7 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20"
         >
-          <div>
+          <div className="md:sticky md:top-28 md:self-start md:h-fit">
             <SectionLabel label="Experience" phase={phase} instant={skipAnimation} />
           </div>
           <div className="space-y-10 stream-reveal" data-ready={phase === "ready"} data-instant={skipAnimation || undefined}>
