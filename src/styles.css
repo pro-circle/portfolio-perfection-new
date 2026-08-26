@@ -157,7 +157,9 @@
   }
 
   html, body {
-    overflow-x: hidden;
+    /* `clip` keeps horizontal overflow contained without creating a scroll
+       container, which would break position: sticky (Experience heading). */
+    overflow-x: clip;
     max-width: 100%;
   }
 
