@@ -13,13 +13,13 @@ const Gallery = () => {
     <section id="hobbies" ref={ref} className="section-padding border-t border-border">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20"
+          className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 items-start"
         >
-          <div>
+          <div className="md:sticky md:top-28 md:self-start md:h-fit z-20">
             <SectionLabel label="Blog" phase={phase} />
           </div>
           <div className="stream-reveal" data-ready={phase === "ready"}>
