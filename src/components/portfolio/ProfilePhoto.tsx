@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import profileImage from "@/photos/profile.png";
-import OrbitMedallions from "./OrbitMedallions";
+
 
 interface ProfilePhotoProps {
   className?: string;
@@ -54,8 +54,6 @@ export default function ProfilePhoto({ className }: ProfilePhotoProps) {
             className="bar-spin-blue profile-frame-bar-contrast"
           />
         </svg>
-
-        <OrbitMedallions />
       </motion.div>
     </div>
   );
