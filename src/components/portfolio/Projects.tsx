@@ -24,16 +24,9 @@ const Projects = () => {
   return (
     <section id="projects" ref={ref} className="section-padding border-t border-border">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="mb-16 md:sticky md:top-28 md:self-start md:h-fit z-20 md:top-24">
-            <SectionLabel label="Work Samples" phase={phase} anchorId="projects-title" instant={skipAnimation} />
-          </div>
-        </motion.div>
+        <div className="mb-16 md:sticky md:top-20 z-20 bg-background/85 backdrop-blur-sm py-3">
+          <SectionLabel label="Work Samples" phase={phase} anchorId="projects-title" instant={skipAnimation} />
+        </div>
 
         <div className="space-y-0 stream-reveal" data-ready={phase === "ready"} data-instant={skipAnimation || undefined}>
           {projects.map((project, i) => (
