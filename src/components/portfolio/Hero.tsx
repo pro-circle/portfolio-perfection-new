@@ -4,6 +4,7 @@ import { ArrowDown, BookOpen, Github, Linkedin } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import StreamText from "./StreamText";
 import ProfilePhoto from "./ProfilePhoto";
+import Magnetic from "./Magnetic";
 
 
 
@@ -95,20 +96,26 @@ const Hero = () => {
             />
 
             <div className="flex flex-wrap items-center gap-4 mb-10">
-              <Button variant="hero" size="lg" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
-                View Projects
-              </Button>
-              <Button variant="hero-outline" size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
-                Get in Touch
-              </Button>
-              <button
-                onClick={() => document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold tracking-wide uppercase text-muted-foreground hover:text-accent transition-colors"
-                aria-label="Jump to skills section"
-              >
-                <BookOpen size={16} strokeWidth={2} />
-                Resume
-              </button>
+              <Magnetic>
+                <Button variant="hero" size="lg" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
+                  View Projects
+                </Button>
+              </Magnetic>
+              <Magnetic>
+                <Button variant="hero-outline" size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+                  Get in Touch
+                </Button>
+              </Magnetic>
+              <Magnetic strength={4}>
+                <button
+                  onClick={() => document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })}
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold tracking-wide uppercase text-muted-foreground hover:text-accent transition-colors"
+                  aria-label="Jump to skills section"
+                >
+                  <BookOpen size={16} strokeWidth={2} />
+                  Resume
+                </button>
+              </Magnetic>
             </div>
 
             <div className="flex items-center gap-6 pt-6 border-t border-border/60 max-w-md">
