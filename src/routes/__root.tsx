@@ -17,6 +17,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { RocketCursor } from "@/components/portfolio/RocketCursor";
 import { ClickSparkle } from "@/components/portfolio/ClickSparkle";
 import { ShootingStar } from "@/components/portfolio/ShootingStar";
+import { StarField } from "@/components/portfolio/StarField";
+
 
 import PageTransition from "@/components/portfolio/PageTransition";
 
@@ -170,7 +172,9 @@ function RootComponent() {
         <Sonner />
         <RocketCursor />
         <ClickSparkle />
+        <StarField />
         <ShootingStar />
+
 
         <div className="relative z-10">
           <PageTransition>
