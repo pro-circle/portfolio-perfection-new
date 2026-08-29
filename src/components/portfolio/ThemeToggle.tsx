@@ -14,6 +14,7 @@ const ThemeToggle = ({ className = "" }: ThemeToggleProps) => {
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
     try {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     } catch {}

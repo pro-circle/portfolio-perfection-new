@@ -16,6 +16,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { RocketCursor } from "@/components/portfolio/RocketCursor";
 import { ClickSparkle } from "@/components/portfolio/ClickSparkle";
+import { ShootingStar } from "@/components/portfolio/ShootingStar";
 
 import PageTransition from "@/components/portfolio/PageTransition";
 
@@ -108,7 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark bg-background">
       <head>
         <HeadContent />
         <script
@@ -169,6 +170,7 @@ function RootComponent() {
         <Sonner />
         <RocketCursor />
         <ClickSparkle />
+        <ShootingStar />
 
         <div className="relative z-10">
           <PageTransition>
