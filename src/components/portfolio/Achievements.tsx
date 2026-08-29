@@ -37,7 +37,7 @@ const CARD_WIDTH = 660;
 const GAP = 24;
 const ITEM_TOTAL = CARD_WIDTH + GAP;
 const SPEED = 120;
-const COMPACT_HEIGHT = 260;
+const COMPACT_HEIGHT = 184;
 
 
 const Achievements = () => {
@@ -162,7 +162,7 @@ const Achievements = () => {
                     isExpanded ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
-                  <div className="relative w-full h-[260px] rounded-xl border border-white/25 bg-card overflow-visible">
+                  <div className="relative w-full h-[184px] rounded-xl border border-border bg-card overflow-visible">
                     <div className="relative w-full h-full overflow-visible">
                       {renderCards().map(({ achievement, position }, i) => (
                         <div
@@ -232,7 +232,7 @@ const Achievements = () => {
                             ease: [0.22, 1, 0.36, 1],
                             delay: isExpanded ? 0.1 + idx * 0.12 : (achievementsData.length - 1 - idx) * 0.06,
                           }}
-                          className="group/card relative w-full rounded-xl border-2 border-border bg-card overflow-visible hover:bg-white/10 hover:border-white/30 hover:shadow-2xl transition-[box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                          className="group/card relative w-full rounded-xl border-2 border-border bg-card overflow-visible hover:bg-accent/5 hover:border-accent/40 hover:shadow-2xl transition-[box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
                         >
                           <a
                             href={achievement.postUrl}

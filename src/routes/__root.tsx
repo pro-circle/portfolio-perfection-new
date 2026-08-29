@@ -16,6 +16,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { RocketCursor } from "@/components/portfolio/RocketCursor";
 import { ClickSparkle } from "@/components/portfolio/ClickSparkle";
+import { ShootingStar } from "@/components/portfolio/ShootingStar";
 
 import PageTransition from "@/components/portfolio/PageTransition";
 
@@ -108,16 +109,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="dark" style={{ backgroundColor: "hsl(225 15% 8%)" }}>
+    <html lang="en" className="dark bg-background">
       <head>
         <HeadContent />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':true;document.documentElement.classList.toggle('dark',d);}catch(e){document.documentElement.classList.add('dark');}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':true;var r=document.documentElement;r.classList.toggle('dark',d);r.style.colorScheme=d?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();`,
           }}
         />
       </head>
-      <body style={{ backgroundColor: "hsl(225 15% 8%)" }}>
+      <body className="bg-background text-foreground">
         {children}
         <Scripts />
       </body>
@@ -169,6 +170,7 @@ function RootComponent() {
         <Sonner />
         <RocketCursor />
         <ClickSparkle />
+        <ShootingStar />
 
         <div className="relative z-10">
           <PageTransition>

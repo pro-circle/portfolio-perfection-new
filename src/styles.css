@@ -610,3 +610,34 @@
   .page-fade { animation: none; }
   .tilt-card__inner { transform: none; }
 }
+
+/* Shooting star — minimal, fiery blue streak */
+@keyframes shooting-star-fly {
+  0% { opacity: 0; transform: rotate(var(--star-angle, 20deg)) translateX(-40%) scaleX(0.2); }
+  12% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(var(--star-angle, 20deg)) translateX(320%) scaleX(1); }
+}
+
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  border-radius: 9999px;
+  transform-origin: left center;
+  background: linear-gradient(
+    90deg,
+    hsl(205 100% 70% / 0) 0%,
+    hsl(205 100% 70% / 0.45) 45%,
+    hsl(200 100% 85% / 0.95) 85%,
+    hsl(0 0% 100%) 100%
+  );
+  box-shadow:
+    0 0 6px hsl(205 100% 65% / 0.8),
+    0 0 18px hsl(210 100% 60% / 0.45),
+    0 0 32px hsl(38 95% 60% / 0.25);
+  animation: shooting-star-fly var(--star-duration, 1.4s) cubic-bezier(0.25, 0.6, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shooting-star { display: none; }
+}
