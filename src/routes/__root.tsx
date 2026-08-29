@@ -172,7 +172,7 @@ function RootComponent() {
         <Sonner />
         <RocketCursor />
         <ClickSparkle />
-        <ShootingStar />
+        <StarField />
 
         <div className="relative z-10">
           <PageTransition>
