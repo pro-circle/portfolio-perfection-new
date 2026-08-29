@@ -37,7 +37,7 @@ const CARD_WIDTH = 660;
 const GAP = 24;
 const ITEM_TOTAL = CARD_WIDTH + GAP;
 const SPEED = 120;
-const COMPACT_HEIGHT = 260;
+const COMPACT_HEIGHT = 184;
 
 
 const Achievements = () => {
@@ -162,7 +162,7 @@ const Achievements = () => {
                     isExpanded ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
-                  <div className="relative w-full h-[260px] rounded-xl border border-white/25 bg-card overflow-visible">
+                  <div className="relative w-full h-[184px] rounded-xl border border-border bg-card overflow-visible">
                     <div className="relative w-full h-full overflow-visible">
                       {renderCards().map(({ achievement, position }, i) => (
                         <div
