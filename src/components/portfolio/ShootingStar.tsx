@@ -20,25 +20,26 @@ export const ShootingStar = () => {
     let id = 0;
 
     const schedule = () => {
-      const delay = 5000 + Math.random() * 9000;
+      const delay = 9000 + Math.random() * 14000;
       timer = window.setTimeout(() => {
         const star: Star = {
           id: id++,
-          top: 5 + Math.random() * 55,
-          left: Math.random() * 70,
-          angle: 15 + Math.random() * 25,
-          length: 140 + Math.random() * 160,
-          duration: 1.1 + Math.random() * 0.6,
+          top: 3 + Math.random() * 60,
+          left: Math.random() * 65,
+          angle: 12 + Math.random() * 30,
+          length: 180 + Math.random() * 220,
+          duration: 2.6 + Math.random() * 1.8,
         };
         setStars((prev) => [...prev, star]);
         window.setTimeout(
           () => setStars((prev) => prev.filter((s) => s.id !== star.id)),
-          star.duration * 1000 + 100,
+          star.duration * 1000 + 200,
         );
         schedule();
       }, delay);
     };
     schedule();
+
 
     return () => window.clearTimeout(timer);
   }, []);
