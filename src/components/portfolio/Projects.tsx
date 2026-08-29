@@ -87,7 +87,7 @@ const Projects = () => {
           <div className="w-full max-w-4xl">
             <button
               onClick={() => setOpenSourceOpen((v) => !v)}
-              className="w-full flex items-center justify-between gap-4 px-6 py-4 rounded-xl border border-white/30 bg-card hover:border-white/50 hover:bg-white/5 transition-colors text-left group"
+              className="w-full flex items-center justify-between gap-4 px-6 py-4 rounded-xl border border-border bg-card hover:border-accent/50 hover:bg-accent/5 transition-colors text-left group"
             >
               <div>
                 <h4 className={`font-display text-xl font-semibold transition-colors ${openSourceOpen ? 'text-accent' : 'text-foreground group-hover:text-accent-hover'}`}>

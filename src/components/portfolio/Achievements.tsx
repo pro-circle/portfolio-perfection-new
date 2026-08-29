@@ -232,7 +232,7 @@ const Achievements = () => {
                             ease: [0.22, 1, 0.36, 1],
                             delay: isExpanded ? 0.1 + idx * 0.12 : (achievementsData.length - 1 - idx) * 0.06,
                           }}
-                          className="group/card relative w-full rounded-xl border-2 border-border bg-card overflow-visible hover:bg-white/10 hover:border-white/30 hover:shadow-2xl transition-[box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                          className="group/card relative w-full rounded-xl border-2 border-border bg-card overflow-visible hover:bg-accent/5 hover:border-accent/40 hover:shadow-2xl transition-[box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
                         >
                           <a
                             href={achievement.postUrl}
