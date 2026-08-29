@@ -613,31 +613,80 @@
 
 /* Shooting star — minimal, fiery blue streak */
 @keyframes shooting-star-fly {
-  0% { opacity: 0; transform: rotate(var(--star-angle, 20deg)) translateX(-40%) scaleX(0.2); }
-  12% { opacity: 1; }
-  70% { opacity: 1; }
-  100% { opacity: 0; transform: rotate(var(--star-angle, 20deg)) translateX(320%) scaleX(1); }
+  0% { opacity: 0; transform: rotate(var(--star-angle, 20deg)) translate3d(-30%, 0, 0) scaleX(0.15); }
+  10% { opacity: 0.9; }
+  60% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(var(--star-angle, 20deg)) translate3d(300%, 0, 0) scaleX(1); }
 }
 
 .shooting-star {
   position: absolute;
-  height: 2px;
+  height: 1.5px;
   border-radius: 9999px;
   transform-origin: left center;
+  will-change: transform, opacity;
   background: linear-gradient(
     90deg,
-    hsl(205 100% 70% / 0) 0%,
-    hsl(205 100% 70% / 0.45) 45%,
-    hsl(200 100% 85% / 0.95) 85%,
+    hsl(205 100% 75% / 0) 0%,
+    hsl(205 100% 75% / 0.18) 30%,
+    hsl(200 100% 85% / 0.55) 72%,
+    hsl(45 100% 88% / 0.95) 94%,
     hsl(0 0% 100%) 100%
   );
+  filter: drop-shadow(0 0 4px hsl(205 100% 70% / 0.55));
+  animation: shooting-star-fly var(--star-duration, 3s) cubic-bezier(0.3, 0.5, 0.25, 1) forwards;
+}
+
+/* Soft smoke/dust trail behind the streak */
+.shooting-star::before {
+  content: "";
+  position: absolute;
+  inset: -5px 12% -5px 0;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    hsl(210 60% 80% / 0) 0%,
+    hsl(210 55% 80% / 0.07) 45%,
+    hsl(30 80% 80% / 0.12) 90%,
+    hsl(30 90% 85% / 0) 100%
+  );
+  filter: blur(4px);
+}
+
+/* Burning head */
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, hsl(0 0% 100%) 0%, hsl(45 100% 75% / 0.9) 40%, hsl(25 100% 60% / 0.35) 70%, transparent 100%);
   box-shadow:
-    0 0 6px hsl(205 100% 65% / 0.8),
-    0 0 18px hsl(210 100% 60% / 0.45),
-    0 0 32px hsl(38 95% 60% / 0.25);
-  animation: shooting-star-fly var(--star-duration, 1.4s) cubic-bezier(0.25, 0.6, 0.3, 1) forwards;
+    0 0 8px hsl(40 100% 70% / 0.8),
+    0 0 20px hsl(25 100% 60% / 0.45),
+    0 0 34px hsl(205 100% 65% / 0.3);
+}
+
+/* Minimal ambient glowing stars */
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.18; transform: scale(0.85); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+.ambient-star {
+  position: absolute;
+  border-radius: 9999px;
+  background: hsl(var(--star-hue, 205) 100% 88%);
+  box-shadow: 0 0 6px 1px hsl(var(--star-hue, 205) 100% 75% / 0.6);
+  animation: star-twinkle var(--star-twinkle-duration, 5s) ease-in-out infinite;
+  animation-delay: var(--star-twinkle-delay, 0s);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .shooting-star { display: none; }
+  .shooting-star,
+  .ambient-star { display: none; }
 }
+
