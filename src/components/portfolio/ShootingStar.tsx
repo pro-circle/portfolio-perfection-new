@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+type Variant = "fire" | "smoke" | "blue";
+
 type Star = {
   id: number;
   top: number;
@@ -7,9 +9,12 @@ type Star = {
   angle: number;
   length: number;
   duration: number;
+  variant: Variant;
 };
 
-/** Occasional minimal shooting star streaking across the page. */
+const VARIANTS: Variant[] = ["fire", "smoke", "blue"];
+
+/** Occasional realistic shooting star streaking across the page (3 random looks). */
 export const ShootingStar = () => {
   const [stars, setStars] = useState<Star[]>([]);
 
@@ -20,26 +25,32 @@ export const ShootingStar = () => {
     let id = 0;
 
     const schedule = () => {
-      const delay = 9000 + Math.random() * 14000;
+      const delay = 11000 + Math.random() * 16000;
       timer = window.setTimeout(() => {
+        const variant = VARIANTS[Math.floor(Math.random() * VARIANTS.length)]!;
         const star: Star = {
           id: id++,
-          top: 3 + Math.random() * 60,
-          left: Math.random() * 65,
-          angle: 12 + Math.random() * 30,
-          length: 180 + Math.random() * 220,
-          duration: 2.6 + Math.random() * 1.8,
+          top: 3 + Math.random() * 55,
+          left: Math.random() * 60,
+          angle: 14 + Math.random() * 28,
+          length:
+            variant === "blue"
+              ? 220 + Math.random() * 260
+              : variant === "fire"
+                ? 150 + Math.random() * 180
+                : 190 + Math.random() * 220,
+          duration: (variant === "blue" ? 4.2 : 5.2) + Math.random() * 2.2,
+          variant,
         };
         setStars((prev) => [...prev, star]);
         window.setTimeout(
           () => setStars((prev) => prev.filter((s) => s.id !== star.id)),
-          star.duration * 1000 + 200,
+          star.duration * 1000 + 300,
         );
         schedule();
       }, delay);
     };
     schedule();
-
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -51,7 +62,7 @@ export const ShootingStar = () => {
       {stars.map((s) => (
         <span
           key={s.id}
-          className="shooting-star"
+          className={`shooting-star shooting-star--${s.variant}`}
           style={{
             top: `${s.top}%`,
             left: `${s.left}%`,

@@ -154,7 +154,16 @@ export const RocketCursor = () => {
       const ex = px - cos * 30;
       const ey = py - sin * 30;
 
-      // motion trail
+      // Nothing is drawn until the pointer has actually moved — otherwise the
+      // exhaust would idle in the middle of the screen on mount.
+      if (!visible) {
+        particles.length = 0;
+        trail.length = 0;
+        ctx.clearRect(0, 0, w, h);
+        return;
+      }
+
+
       if (thrust > 0.12) {
         trail.push({ x: ex, y: ey, a: Math.min(1, thrust) });
         if (trail.length > 26) trail.shift();

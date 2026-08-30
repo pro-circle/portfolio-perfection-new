@@ -7,7 +7,7 @@ interface ProfilePhotoProps {
 
 export default function ProfilePhoto({ className }: ProfilePhotoProps) {
   return (
-    <div className={`relative -translate-y-[5px] ${className ?? ""}`}>
+    <div className={`relative -translate-y-[20px] ${className ?? ""}`}>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

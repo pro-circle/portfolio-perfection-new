@@ -5,6 +5,8 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import StreamText from "./StreamText";
 import ProfilePhoto from "./ProfilePhoto";
 import Magnetic from "./Magnetic";
+import HeroRocket from "./HeroRocket";
+
 
 
 
@@ -62,30 +64,28 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="order-2 lg:order-1"
           >
-            <div className="relative inline-block w-max mb-6 px-6 py-4">
+            <div className="relative inline-block w-max mb-3">
               <motion.h2
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="font-display text-3xl md:text-5xl font-medium tracking-tight text-foreground mb-3"
+                className="font-display text-4xl md:text-6xl font-medium tracking-tight text-foreground mb-2 flex items-center"
               >
                 Vikram Udhayakumar
+                <HeroRocket size={34} />
               </motion.h2>
-
-
-
 
               <p className="text-sm font-medium tracking-widest uppercase">
                 <span className="shimmer-text">Gen AI Developer</span>
               </p>
             </div>
 
-
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight mb-10">
               Building elegant
               <br />
               <span className="text-gradient">digital solutions</span>
             </h1>
+
 
             <StreamText
               as="p"
