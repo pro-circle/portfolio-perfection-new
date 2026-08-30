@@ -22,28 +22,28 @@ const items: Item[] = [
     title: "Learning Track",
     description:
       "Contributing to developer tools and writing small code blocks. It keeps me sharp and connected with the wider engineering community.",
-    image: "/images/blog/hack-blog.png",
+    image: "/images/blog/hack-blog.webp",
     year: "2026",
   },
   {
     title: "Live Workshop",
     description:
       "Long-form tools, suitability, specification and needs. A lot, but with clear identification and the usage flows",
-    image: "/images/blog/blog-uptor.png",
+    image: "/images/blog/blog-uptor.webp",
     year: "2025",
   },
   {
     title: "AI Workshop",
     description:
       "A workshop focused on how to use AI to earn and increase earnings. Earning not only means money, but also fame, time and interest",
-    image: "/images/blog/gateway-blog.png",
+    image: "/images/blog/gateway-blog.webp",
     year: "2025",
   },
   {
     title: "Personalization in Data Science",
     description:
       "Hands-on certification covering modern tech stacks, SDKs, REST APIs, and production-grade deployment workflows.",
-    image: "/images/blog/ksr-blog.png",
+    image: "/images/blog/ksr-blog.webp",
     year: "2025",
   },
 ];

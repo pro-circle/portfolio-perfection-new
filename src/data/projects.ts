@@ -31,11 +31,11 @@ export const projects: ProjectItem[] = [
     year: "2025",
     githubUrl: "https://github.com/vik77-git",
     liveUrl: "https://invoice-flow-mvp.web.app/",
-    thumbnail: "/images/Projects/inv-thumb.png",
+    thumbnail: "/images/Projects/inv-thumb.webp",
     screenshots: [
-      { src: "/images/Projects/inv-1.png", caption: "Home page: the landing dashboard with live queue metrics." },
-      { src: "/images/Projects/inv-2.png", caption: "Dedicated page to edit and customize the message content." },
-      { src: "/images/Projects/inv-3.png", caption: "Card with instant notification run and automated time stamp." },
+      { src: "/images/Projects/inv-1.webp", caption: "Home page: the landing dashboard with live queue metrics." },
+      { src: "/images/Projects/inv-2.webp", caption: "Dedicated page to edit and customize the message content." },
+      { src: "/images/Projects/inv-3.webp", caption: "Card with instant notification run and automated time stamp." },
     ],
   },
   {
@@ -51,11 +51,11 @@ export const projects: ProjectItem[] = [
     year: "2025",
     githubUrl: "https://github.com/vik77-git",
     liveUrl: "https://hug-vik-7-demo.hf.space/",
-    thumbnail: "/images/Projects/aadhar1.png",
+    thumbnail: "/images/Projects/aadhar1.webp",
     screenshots: [
-      { src: "/images/Projects/aadhar1.png", caption: "Home and landing page describing the project use." },
-      { src: "/images/Projects/aadhar2.png", caption: "Instruction Page: Guiding the users to get most most of the app." },
-      { src: "/images/Projects/aadhar3.png", caption: "The real interface where the process begins with aadhar card upload." },
+      { src: "/images/Projects/aadhar1.webp", caption: "Home and landing page describing the project use." },
+      { src: "/images/Projects/aadhar2.webp", caption: "Instruction Page: Guiding the users to get most most of the app." },
+      { src: "/images/Projects/aadhar3.webp", caption: "The real interface where the process begins with aadhar card upload." },
     ],
   },
   {
@@ -71,11 +71,11 @@ export const projects: ProjectItem[] = [
     year: "2026",
     githubUrl: "https://github.com/vik77-git",
     liveUrl: "https://vikram-u.web.app",
-    thumbnail: "/images/Projects/ats-1.png",
+    thumbnail: "/images/Projects/ats-1.webp",
     screenshots: [
-      { src: "/images/Projects/ats-1.png", caption: "Live dashboard: real-time event ingestion overview." },
-      { src: "/images/Projects/ats-2.png", caption: "Query console: sub-second analytical queries on ClickHouse." },
-      { src: "/images/Projects/ats-3.png", caption: "Pipeline graph: visualize Kafka → processor → sink flow." },
+      { src: "/images/Projects/ats-1.webp", caption: "Live dashboard: real-time event ingestion overview." },
+      { src: "/images/Projects/ats-2.webp", caption: "Query console: sub-second analytical queries on ClickHouse." },
+      { src: "/images/Projects/ats-3.webp", caption: "Pipeline graph: visualize Kafka → processor → sink flow." },
     ],
   },
   {
@@ -91,11 +91,11 @@ export const projects: ProjectItem[] = [
     year: "2026",
     githubUrl: "https://github.com/vik77-git",
     liveUrl: "https://vikram-u.web.app",
-    thumbnail: "/images/Projects/agent-thumb.png",
+    thumbnail: "/images/Projects/agent-thumb.webp",
     screenshots: [
-      { src: "/images/Projects/agent-1.png", caption: "Project overview: multi-cloud resources at a glance." },
-      { src: "/images/Projects/agent-2.png", caption: "Plan preview: visualize changes before they apply." },
-      { src: "/images/Projects/agent-3.png", caption: "Drift detection: highlight infra changes outside IaC." },
+      { src: "/images/Projects/agent-1.webp", caption: "Project overview: multi-cloud resources at a glance." },
+      { src: "/images/Projects/agent-2.webp", caption: "Plan preview: visualize changes before they apply." },
+      { src: "/images/Projects/agent-3.webp", caption: "Drift detection: highlight infra changes outside IaC." },
     ],
   },
 ];

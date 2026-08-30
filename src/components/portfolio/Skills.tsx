@@ -97,9 +97,9 @@ const skillLogos: Record<string, { slug: string; dark?: boolean; url?: string }>
 };
 
 const resumePages = [
-  "/images/resume/page-1.jpg",
-  "/images/resume/page-2.jpg",
-  "/images/resume/page-3.jpg",
+  "/images/resume/page-1.webp",
+  "/images/resume/page-2.webp",
+  "/images/resume/page-3.webp",
 ];
 
 

@@ -20,7 +20,7 @@ export const experienceData: ExperienceItem[] = [
     technologies: ["YOLO", "Node.js", "PostgreSQL"],
     detailedJourney:
       "During my internship, I was part of the platform engineering team of more than 10 members where I designed and implemented the object detection model, YOLO for detecting and verifying Aadhar card validity. The parameters includes, Name, Aadhar number, date of birth, photo and the card layout. Flushed out an accuracy of 0.8. This project craved me to learn deeper on AI",
-    images: ["/images/experience/exp-img1.png", "/images/experience/1-intern-cert.png"],
+    images: ["/images/experience/exp-img1.webp", "/images/experience/1-intern-cert.webp"],
   },
   {
     slug: "web-development-intern",
@@ -32,7 +32,7 @@ export const experienceData: ExperienceItem[] = [
     technologies: ["HTML", "CSS", "Fast API"],
     detailedJourney:
       "Worked on the customer-facing web application, an e-commerce website rebuilding APIs and inegrating the backend with frontend. This is the first step of my practical implementation. I came out with many doubts and clarification  of how the website works, recives and sends requests and responding to the client queries.",
-    images: ["/images/experience/exp-img2.png", "/images/experience/2-intern-cert.jpg"],
+    images: ["/images/experience/exp-img2.webp", "/images/experience/2-intern-cert.webp"],
   },
 ];
 
