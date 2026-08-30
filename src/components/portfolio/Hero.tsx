@@ -5,6 +5,8 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import StreamText from "./StreamText";
 import ProfilePhoto from "./ProfilePhoto";
 import Magnetic from "./Magnetic";
+import HeroRocket from "./HeroRocket";
+
 
 
 
