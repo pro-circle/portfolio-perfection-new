@@ -18,6 +18,7 @@ import { RocketCursor } from "@/components/portfolio/RocketCursor";
 import { ClickSparkle } from "@/components/portfolio/ClickSparkle";
 import { ShootingStar } from "@/components/portfolio/ShootingStar";
 import { StarField } from "@/components/portfolio/StarField";
+import PreloadAssets from "@/components/portfolio/PreloadAssets";
 
 
 import PageTransition from "@/components/portfolio/PageTransition";
@@ -174,6 +175,7 @@ function RootComponent() {
         <ClickSparkle />
         <StarField />
         <ShootingStar />
+        <PreloadAssets />
 
 
         <div className="relative z-10">
