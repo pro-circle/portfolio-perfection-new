@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { projects } from "@/data/projects";
-import { experiences } from "@/data/experience";
+import { experienceData } from "@/data/experience";
 
 const EXTRA = [
   "/images/achievement/genai_ach.webp",
@@ -26,7 +26,7 @@ export const PreloadAssets = () => {
       if (p.thumbnail) urls.add(p.thumbnail);
       for (const s of p.screenshots ?? []) urls.add(s.src);
     }
-    for (const e of experiences) {
+    for (const e of experienceData) {
       for (const img of e.images ?? []) urls.add(img);
     }
 
