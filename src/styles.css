@@ -758,3 +758,77 @@
   .ambient-star { display: none; }
 }
 
+
+/* Hero rocket — startup blast on mount, then idle hover */
+@keyframes hero-rocket-launch {
+  0% { transform: translate3d(-14px, 10px, 0) rotate(-18deg) scale(0.75); opacity: 0; }
+  25% { opacity: 1; }
+  60% { transform: translate3d(3px, -4px, 0) rotate(-10deg) scale(1.06); opacity: 1; }
+  100% { transform: translate3d(0, 0, 0) rotate(-12deg) scale(1); opacity: 1; }
+}
+
+@keyframes hero-rocket-idle {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-12deg); }
+  50% { transform: translate3d(0, -3px, 0) rotate(-12deg); }
+}
+
+@keyframes hero-rocket-blast {
+  0% { opacity: 0; transform: scale(0.2); }
+  18% { opacity: 1; transform: scale(1.25); }
+  55% { opacity: 0.7; transform: scale(0.9); }
+  100% { opacity: 0; transform: scale(0.35); }
+}
+
+@keyframes hero-rocket-smoke {
+  0% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.3); }
+  22% { opacity: 0.55; }
+  100% { opacity: 0; transform: translate3d(-26px, 12px, 0) scale(2.1); }
+}
+
+.hero-rocket {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.45rem;
+}
+
+.hero-rocket__ship {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform-origin: 50% 50%;
+  animation:
+    hero-rocket-launch 1.1s cubic-bezier(0.22, 1, 0.36, 1) both,
+    hero-rocket-idle 3.6s ease-in-out 1.2s infinite;
+}
+
+.hero-rocket__blast {
+  position: absolute;
+  left: -30%;
+  top: 50%;
+  width: 78%;
+  height: 78%;
+  margin-top: -39%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, hsl(50 100% 95% / 0.95) 0%, hsl(40 100% 70% / 0.8) 35%, hsl(20 100% 55% / 0.4) 65%, transparent 100%);
+  filter: blur(1px);
+  animation: hero-rocket-blast 1.05s ease-out both;
+}
+
+.hero-rocket__smoke {
+  position: absolute;
+  left: -34%;
+  top: 46%;
+  width: 70%;
+  height: 70%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, hsl(30 20% 82% / 0.4) 0%, hsl(220 12% 78% / 0.22) 55%, transparent 100%);
+  filter: blur(4px);
+  animation: hero-rocket-smoke 1.9s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rocket__ship { animation: none; transform: rotate(-12deg); }
+  .hero-rocket__blast,
+  .hero-rocket__smoke { display: none; }
+}
